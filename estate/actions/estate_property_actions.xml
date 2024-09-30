@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<odoo>
+<menuitem id="estate_menu_root" name="Manage Property">
+     <menuitem id="estate_property_menu_action" name="List of Properties" action="estate_property_action"/>
+</menuitem>
+</odoo>
