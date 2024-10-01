@@ -1,0 +1,51 @@
+<odoo>
+    <record id="view_estate_property_type_list" model="ir.ui.view">
+		<field name="name">estate.property.type.list</field>
+		<field name="model">estate.property.type</field>
+		<field name="arch" type="xml">
+			<list string="Properties">
+				<field name="name"/>				
+			</list>
+		</field>
+	</record>
+    <record id="view_estate_property_type_form" model="ir.ui.view">
+		<field name="name">estate.property.type.form</field>
+		<field name="model">estate.property.type</field>
+		<field name="arch" type="xml">
+			<form string="Estates">
+				<sheet>
+					<h1 class="mb16">
+						<field name="name" class="mb16"/>
+					</h1>
+					
+					<notebook>
+						<page string="Description">
+							<sheet>
+								<group>
+									
+								</group>
+							</sheet>
+						</page>
+					</notebook>
+				</sheet>
+			</form>
+		</field>
+	</record>
+    <record id="view_estate_property_type_search" model="ir.ui.view">
+		<field name="name">estate.property.type.search</field>
+		<field name="model">estate.property.type</field>
+		<field name="arch" type="xml">
+			<search string="Type">
+				<field name="name" string="Name" />				
+				<filter string="Filtered" name="Property Name" domain="[('name', '=', 'Type1')]"/>
+			</search>
+		</field>
+	</record>
+    <record id="estate_property_type_action" model="ir.actions.act_window">
+		<field name="name">Property Types</field>
+		<field name="res_model">estate.property.type</field>
+		<field name="view_mode">list,form</field>
+	</record>
+</odoo>
+
+
